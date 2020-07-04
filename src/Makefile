@@ -8,13 +8,15 @@ SOURCES= main.c \
 		 queue.c \
 		 queue_internal.c\
 		 event.c\
-		 time.c
+		 time.c\
+		 log_audit.c
 
 OBJECTS= obj/main.o\
 		 obj/queue.o\
 		 obj/queue_internal.o\
 		 obj/event.o\
-		 obj/time.o
+		 obj/time.o\
+		 obj/log_audit.o
 
 TARGET= ../bin/Test
 
@@ -33,6 +35,8 @@ obj/event.o: event.c
 	$(CC) -c -o obj/event.o event.c
 obj/time.o: time.c
 	$(CC) -c -o obj/time.o time.c
+obj/log_audit.o: log_audit.c
+	$(CC) -c -o obj/log_audit.o log_audit.c
 
 
 
