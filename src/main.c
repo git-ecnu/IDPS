@@ -26,6 +26,7 @@ void get_number()
 	{	
 		while(!queue_get_event(q, &s1))
 		{
+			sleep(1);
 			event_display(s1);
 			free(s1);
 		}
